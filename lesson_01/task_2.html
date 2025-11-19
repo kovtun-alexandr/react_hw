@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Task #2</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <h2>Task #02</h2>
+            </div>
+        </header>
+        <main class="page">
+            <section class="homework homework__container">
+                <!-- Додаток містить масив об’єктів (логін, пароль) -- існуючі логіни і паролі. Користувач
+                    вводить логін і пароль, а програма при натисненні на кнопку повідомляє чи може
+                    користувач бути авторизованим. -->
+                <div id="root" class="root-autoresection"></div>
+                <script type="text/babel">
+                    function Autoresection() {
+                        const users = [
+                            { login: "admin", password: "admin" },
+                            { login: "user1", password: "pass1" },
+                            { login: "user2", password: "qwerty" },
+                            { login: "user3", password: "123456" }
+                        ];
+
+                        const [messageError, setMessageError] = React.useState("")
+                        const inputRefLogin = React.useRef()
+                        const inputRefPasswoed = React.useRef()
+
+                        function checkAutoresection() {
+                            const login = inputRefLogin.current.value
+                            const password = inputRefPasswoed.current.value
+
+                            const user = users.find(u => u.login === login);
+
+                            if (!user) {
+                                setMessageError("Такого користувача не існує!");
+                                inputRefPasswoed.current.value = ""
+                                return false;
+                            }
+
+                            if (user.password !== password) {
+                                setMessageError("Невірний пароль!");
+                                inputRefPasswoed.current.value = ""
+                                return false;
+                            }
+
+                            setMessageError("")
+                            window.open("./congratulation.html", "_blank");
+                            return true;
+                        }
+
+                        return (
+                            <div className="autoresection">
+                                <MyInput
+                                    label="Login:"
+                                    ref={inputRefLogin}
+                                    placeholder="Login"
+                                />
+                                <MyInput
+                                    label="Password:"
+                                    ref={inputRefPasswoed}
+                                    placeholder="Password"
+                                />
+                                <span style={{ color: "red" }}>{messageError}</span>
+                                <MyButton onClick={checkAutoresection} text="Go" />
+                            </div>
+                        )
+                    }
+
+                    function MyButton({ onClick, text }) {
+                        return (
+                            <button onClick={onClick}>{text}</button>
+                        )
+                    }
+
+                    const MyInput = React.forwardRef(function MyInput({ label, type = "text", placeholder }, ref) {
+                        return (
+                            <label>
+                                <span>{label}</span>
+                                <input type={type} ref={ref} placeholder={placeholder} />
+                            </label>
+                        );
+                    });
+
+                    const root = ReactDOM.createRoot(document.getElementById('root'))
+                    root.render(<Autoresection />)
+                </script>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__cotyright">
+                    &copy; Oleksander Kovtun
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

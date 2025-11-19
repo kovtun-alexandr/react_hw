@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Task #1</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <h2>Task #01</h2>
+            </div>
+        </header>
+        <main class="page">
+            <section class="homework homework__container">
+                <!-- Рахунок у банку
+                    Вимоги:
+                    1) спочатку сума дорівнює 0грн. Змінити суму у гривнях можна або зарахуванням на
+                        рахунок, або зняттям
+                    2) сума автоматично переводиться у долари та євро (фіксований курс задається у
+                        data)
+                    3) можливість зарахувати суму (контролювати, щоб не була від’ємною)
+                    4) можливість зняти (щоб не можна зняти більше ніж є на рахунку)
+                    5) при виконанні зняття і зарахування коштів вираховувати 3% від суми (відображати
+                        кількість відсотків автоматично)
+                    При зміні суми :
+                    - якщо було зняття, то суму відображати червоним</li>
+                    - якщо було зарахування, то суму відображати зеленим</li>
+                    - якщо сума валюти менша за 100 то відображати червоним кольором, інакше - зеленим -->
+                <div id="root"></div>
+                <script type="text/babel">
+                    function BankAccount() {
+                        const [money, setMoney] = React.useState(0)
+                        const [percent, setPercent] = React.useState(0)
+                        const [moneyColor, setMoneyColor] = React.useState("black")
+                        const [addError, setAddError] = React.useState("")
+                        const [withdrawError, setWithdrawError] = React.useState("")
+                        const [usd, setUsd] = React.useState(0)
+                        const [eur, setEur] = React.useState(0)
+                        const inputRefAdd = React.useRef()
+                        const inputRefWithdraw = React.useRef()
+                        const usdRef = React.useRef()
+                        const eurRef = React.useRef()
+                        const servicePercent = 0.03
+
+                        function addMoney() {
+                            const val = Number(inputRefAdd.current.value)
+
+                            if (val < 0) {
+                                setAddError("Число не може бути від'ємним!")
+                                return
+                            }
+
+                            const amount = calculatePercente(val)
+                            setPercent(amount)
+                            setMoney(prevVal => prevVal + (val - amount))
+                            setMoneyColor("green")
+
+                            setAddError("")
+                            inputRefAdd.current.value = ''
+                        }
+
+                        function withdrawMoney() {
+                            const val = Number(inputRefWithdraw.current.value)
+
+                            if (val < 0) {
+                                setWithdrawError("Число не може бути від'ємним!")
+                                return
+                            }
+
+                            if (money < val) {
+                                setWithdrawError("Недостатьньо коштів на рахунку!")
+                                return
+                            } else {
+                                const amount = calculatePercente(val)
+                                setPercent(amount)
+                                setMoney(prevVal => prevVal - (val - amount))
+                                setMoneyColor("red")
+                            }
+
+                            setWithdrawError('')
+                            inputRefWithdraw.current.value = ''
+                        }
+
+                        function calculatePercente(value) {
+                            return value * servicePercent
+                        }
+
+                        React.useEffect(() => {
+                            const usdRate = parseFloat(usdRef.current.dataset.rate || 1)
+                            const eurRate = parseFloat(eurRef.current.dataset.rate || 1)
+
+                            setUsd(money / usdRate)
+                            setEur(money / eurRate)
+                        }, [money])
+
+
+                        return (
+                            <div className="bank-account">
+                                <div className="row">
+                                    <div>Сума на рахунку: <span style={{ color: moneyColor }}>{money}</span> грн</div>
+                                </div>
+                                <div className="row">
+                                    <MyInput
+                                        label="Зарахувати на рахунок:"
+                                        type="number"
+                                        ref={inputRefAdd}
+                                        error={addError}
+                                    />
+                                    <MyButton onClick={addMoney} text="Зарахуівти" />
+                                </div>
+                                <div className="row">
+                                    <MyInput
+                                        label="Зняти з рахунку:"
+                                        type="number"
+                                        ref={inputRefWithdraw}
+                                        error={withdrawError}
+                                    />
+                                    <MyButton onClick={withdrawMoney} text="Зняти" />
+                                </div>
+                                <div className="row">
+                                    <div>Відсотки за обслуговування: {percent.toFixed(2)} грн</div>
+                                </div>
+                                <hr />
+                                <div className="row">
+                                    <MyBlock ref={usdRef} dataRate="42.02" text="Сума у доларах: $" currency={usd.toFixed(2)} />
+                                    <MyBlock ref={eurRef} dataRate="48.74" text="Сума у євро: €" currency={eur.toFixed(2)} />
+                                </div>
+                            </div>
+                        )
+                    }
+
+                    function MyButton({ onClick, text }) {
+                        return (
+                            <button onClick={onClick}>{text}</button>
+                        )
+                    }
+
+                    const MyInput = React.forwardRef(function MyInput({ label, type = "text", error }, ref) {
+                        return (
+                            <label>
+                                <span>{label}</span>
+                                <input type={type} ref={ref} />
+                                {error && <span className="error" style={{ color: "red" }}>{error}</span>}
+                            </label>
+                        );
+                    });
+
+                    const MyBlock = React.forwardRef(function MyBlock({ dataRate, text, currency }, ref) {
+                        const color = Number(currency) < 100 ? 'red' : 'green'
+                        return (
+                            <div ref={ref} data-rate={dataRate}>
+                                {text}
+                                <span style={{ color }}> {currency}</span>
+                            </div>
+                        )
+                    })
+
+                    const root = ReactDOM.createRoot(document.getElementById('root'))
+                    root.render(<BankAccount />)
+                </script>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__cotyright">
+                    &copy; Oleksander Kovtun
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
