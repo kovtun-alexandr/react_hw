@@ -1,0 +1,73 @@
+.task {
+    h3 {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.ticket {
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 450px;
+    min-height: 450px;
+    text-align: center;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &>*:not(:last-child) {
+        margin-bottom: .5rem;
+    }
+
+}
+
+.business {
+    background-image: url('/image/throne.webp');
+}
+
+.econom {
+    background-image: url('/image/cloud.webp');
+}
+
+#simple-select {
+    padding: .5rem;
+    margin-block: 2rem;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 1rem;
+    background-color: #fff;
+    border: 1px solid grey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    font-weight: 500;
+
+    label {
+        flex-direction: row-reverse;
+        gap: 1rem;
+        padding: 0.3rem;
+        border-radius: .5rem;
+        background-color: #fff;
+        border: 1px solid grey;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        input {
+            width: 24px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
