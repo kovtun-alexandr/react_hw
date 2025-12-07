@@ -1,0 +1,315 @@
+:root {
+  /* ====== BASE DARK COLORS ====== */
+  --cp-bg-0: #030712;
+  /* ультра-темний синьо-чорний */
+  --cp-bg-1: #0B0F19;
+  /* темний космічний синій */
+  --cp-bg-2: #11131F;
+  /* нічний синьо-фіолетовий */
+  --cp-panel: #0D0221;
+  /* фіолетовий космос для блоків */
+  --cp-surface: #1A1D2E;
+  /* поверхні/карточки */
+
+  /* ====== NEON ACCENTS ====== */
+  --cp-neon-cyan: #00F6FF;
+  --cp-neon-pink: #FF00E6;
+  --cp-neon-blue: #3A7BFF;
+  --cp-neon-green: #00FF8F;
+  --cp-neon-purple: #7A00FF;
+
+  /* ====== TEXT COLORS ====== */
+  --cp-text-main: #E4E8FF;
+  /* світлий текст */
+  --cp-text-dim: #8891B8;
+  /* приглушений */
+  --cp-text-neon: #00F6FF;
+  /* акцент */
+
+  /* ====== BORDERS / LINES ====== */
+  --cp-border: rgba(0, 246, 255, 0.3);
+  --cp-border-strong: rgba(255, 0, 230, 0.5);
+
+  /* ====== SHADOWS / GLOWS ====== */
+  --cp-glow-cyan: 0 0 12px #00F6FF;
+  --cp-glow-pink: 0 0 12px #FF00E6;
+  --cp-glow-green: 0 0 12px #00FF8F;
+  --cp-glow-purple: 0 0 12px #7A00FF;
+
+  /* ====== SPECIAL ====== */
+  --cp-grid-line: rgba(0, 246, 255, 0.06);
+  /* для сітки на фоні */
+}
+
+body {
+  background: var(--cp-surface);
+  color: var(--cp-text-main);
+  font-family: "Orbitron", sans-serif;
+}
+
+button {
+  background: var(--cp-neon-pink);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--cp-neon-pink);
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 0 0 25px var(--cp-neon-blue);
+    color: var(--cp-neon-cyan);
+    transform: translateY(-2px);
+  }
+}
+
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+input {
+  padding: .6rem;
+  border-radius: 4px;
+  background-color: var(--cp-neon-cyan);
+  transition: .3s;
+
+  &:hover {
+    border-color: var(--cp-neon-purple);
+    box-shadow: 0 0 15px var(--cp-neon-purple);
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: var(--cp-neon-purple);
+    outline-color: var(--cp-neon-blue);
+    box-shadow: var(--cp-glow-purple);
+  }
+
+  &:disabled {
+    background-color: var(--cp-text-dim);
+  }
+
+  &:hover:disabled {
+    box-shadow: none;
+    border-color: transparent;
+  }
+}
+
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    color: var(--cp-text-neon);
+  }
+}
+
+.messageBlock,
+.guessNumber {
+  background: var(--cp-panel);
+  border: 1px solid var(--cp-border);
+  box-shadow: var(--cp-glow-cyan);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.messageBlock {
+
+  &>*:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .message__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    margin-inline: auto;
+    gap: 1rem;
+    height: 245px;
+    overflow-y: auto;
+  }
+
+  .message__item {
+    display: flex;
+    gap: .5rem;
+    font-size: 20px;
+    color: #1a1a1a;
+
+    .message__text {
+      display: flex;
+      align-items: center;
+      border-radius: .3rem;
+      padding: .5rem 1rem;
+      background-color: var(--cp-text-main);
+    }
+
+    .message__btn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .3rem;
+    }
+
+    .addLike,
+    .addDislike {
+      width: max-content;
+      flex-shrink: 0;
+      color: var(--cp-neon-green);
+      padding: 2px 5px;
+      line-height: 1.2;
+      font-size: 15px;
+      box-shadow: 0px 0px 5px 2px var(--cp-neon-purple);
+    }
+
+    .addLike:hover,
+    .addDislike:hover {
+      box-shadow: 0px 0px 5px 3px var(--cp-neon-green);
+    }
+
+  }
+
+  .message__item:nth-child(odd) {
+    justify-content: start;
+
+  }
+
+  .message__item:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  label {
+    display: flex;
+    max-width: 250px;
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  /* Style the entire scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Style the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: var(--cp-neon-pink);
+    border-radius: 10px;
+  }
+
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: var(--cp-neon-blue);
+    border-radius: 10px;
+    border: 1px solid var(--cp-neon-green);
+    /* Creates a border around the thumb */
+  }
+}
+
+.guessNumber {
+
+  &>*:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .number__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    h3 {
+      color: #00FF8F;
+    }
+  }
+
+  .number__item {
+    padding: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--cp-surface);
+    border-radius: 8px;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 7px 2px var(--cp-neon-purple);
+    background-color: var(--cp-neon-cyan);
+  }
+
+  .player__list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player__item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .player__item>*:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .player__name {
+    color: var(--cp-neon-pink);
+    margin: 0;
+  }
+
+  form,
+  .player__label {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      color: var(--cp-neon-green);
+    }
+  }
+
+  form>*:not(:last-child),
+  .player__label>*:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 14px;
+    color: red;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .answer__list {
+    display: flex;
+    gap: .3rem;
+    line-height: 1;
+    color: var(--cp-neon-green);
+  }
+
+  .answer__item {
+    color: var(--cp-neon-pink);
+  }
+}

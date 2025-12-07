@@ -1,0 +1,32 @@
+/* Modal.module.css - styles for Modal component */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    z-index: 1000;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--cp-panel);
+    border: 1px solid var(--cp-border);
+    box-shadow: var(--cp-glow-cyan);
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 520px;
+    width: 90%;
+    color: #00F6FF;
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 16px;
+        border-radius: 10px;
+    }
+}
