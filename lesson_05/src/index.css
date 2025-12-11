@@ -1,0 +1,206 @@
+:root {
+  /* ====== BASE DARK COLORS ====== */
+  --cp-bg-0: #030712;
+  /* ультра-темний синьо-чорний */
+  --cp-bg-1: #0B0F19;
+  /* темний космічний синій */
+  --cp-bg-2: #11131F;
+  /* нічний синьо-фіолетовий */
+  --cp-panel: #0D0221;
+  /* фіолетовий космос для блоків */
+  --cp-surface: #1A1D2E;
+  /* поверхні/карточки */
+
+  /* ====== NEON ACCENTS ====== */
+  --cp-neon-cyan: #00F6FF;
+  --cp-neon-pink: #FF00E6;
+  --cp-neon-blue: #3A7BFF;
+  --cp-neon-green: #00FF8F;
+  --cp-neon-purple: #7A00FF;
+
+  /* ====== TEXT COLORS ====== */
+  --cp-text-main: #E4E8FF;
+  /* світлий текст */
+  --cp-text-dim: #8891B8;
+  /* приглушений */
+  --cp-text-neon: #00F6FF;
+  /* акцент */
+
+  /* ====== BORDERS / LINES ====== */
+  --cp-border: rgba(0, 246, 255, 0.3);
+  --cp-border-strong: rgba(255, 0, 230, 0.5);
+
+  /* ====== SHADOWS / GLOWS ====== */
+  --cp-glow-cyan: 0 0 12px #00F6FF;
+  --cp-glow-pink: 0 0 12px #FF00E6;
+  --cp-glow-green: 0 0 12px #00FF8F;
+  --cp-glow-purple: 0 0 12px #7A00FF;
+
+  /* ====== SPECIAL ====== */
+  --cp-grid-line: rgba(0, 246, 255, 0.06);
+  /* для сітки на фоні */
+}
+
+body {
+  background: var(--cp-surface);
+  color: var(--cp-text-main);
+  font-family: "Orbitron", sans-serif;
+}
+
+button {
+  background: var(--cp-neon-pink);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--cp-neon-pink);
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 0 0 25px var(--cp-neon-blue);
+    color: var(--cp-neon-cyan);
+    transform: translateY(-2px);
+  }
+}
+
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+input,
+select {
+  padding: .6rem;
+  border-radius: 4px;
+  background-color: var(--cp-neon-cyan);
+  transition: .3s;
+
+  &:hover {
+    border-color: var(--cp-neon-purple);
+    box-shadow: 0 0 15px var(--cp-neon-purple);
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: var(--cp-neon-purple);
+    outline-color: var(--cp-neon-blue);
+    box-shadow: var(--cp-glow-purple);
+  }
+
+  &:disabled {
+    background-color: var(--cp-text-dim);
+  }
+
+  &:hover:disabled {
+    box-shadow: none;
+    border-color: transparent;
+  }
+}
+
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    color: var(--cp-text-neon);
+  }
+
+  h3 {
+    font-size: 28px;
+    color: var(--cp-text-dim);
+  }
+
+  h4 {
+    font-size: 22px;
+    color: var(--cp-text-neon);
+
+    span {
+      color: var(--cp-neon-pink);
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+.tasks__manager>*:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.tasks__block,
+.appointments__block,
+.appointments__card,
+.currency__form {
+  background: var(--cp-panel);
+  border: 1px solid var(--cp-border);
+  box-shadow: var(--cp-glow-cyan);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks__block>*:not(:last-child),
+.appointments__block>*:not(:last-child),
+.currency>*:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.tasks__list,
+.appointments__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.appointments__card {
+  padding: 15px;
+
+  h4 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &>*:not(:last-child) {
+    margin-bottom: .5rem;
+  }
+}
+
+.currency__form {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.currency__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h3>span {
+    color: var(--cp-text-main);
+  }
+}
+
+.currency__result {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  span {
+    font-size: 22px;
+    color: var(--cp-neon-pink);
+  }
+}

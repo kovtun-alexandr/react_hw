@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--cp-panel);
+  border: 1px solid var(--cp-border);
+  box-shadow: var(--cp-glow-cyan);
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  button {
+    padding: 5px 10px;
+    font-weight: bold;
+
+    &:hover {
+      color: var(--cp-bg-2);
+    }
+  }
+}
