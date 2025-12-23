@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router';
-import NavBar from '../NavBar/NavBar';
+import NavBar from '../navbar/NavBar';
 import logo from './../../assets/logo.svg'
 import frontRoutes from '../../router/frontRoutes';
 
