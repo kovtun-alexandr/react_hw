@@ -1,0 +1,47 @@
+.navigate {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    position: relative;
+    color: var(--cp-neon-blue);
+    text-decoration: none;
+    transition: .3s;
+
+    &:hover {
+        color: var(--cp-neon-cyan);
+
+        &::after {
+            background-color: var(--cp-neon-cyan);
+        }
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        transition: .3s;
+    }
+
+
+}
+
+.navLink.active {
+    color: var(--cp-neon-pink);
+    cursor: default;
+
+    &::after {
+        background-color: var(--cp-neon-pink);
+    }
+}
+
+@media (max-width: 450px) {
+    .navigate {
+        gap: 1rem;
+    }
+}
