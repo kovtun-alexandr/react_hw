@@ -1,0 +1,803 @@
+[
+  {
+    "id": 1,
+    "brandName": "Apple",
+    "name": "iPhone 14",
+    "category": "phone",
+    "price": 899,
+    "imgUrl": "https://my-apple.com.ua/image/catalog/products/iphone/iphone-14-14%20Plus/purple-1.png",
+    "description": "Apple iPhone 14 delivers fast performance with the A15 Bionic chip, a bright OLED display, reliable battery life, and a high-quality camera system for everyday use."
+  },
+  {
+    "id": 2,
+    "brandName": "Apple",
+    "name": "iPhone 14 Pro",
+    "category": "phone",
+    "price": 1099,
+    "imgUrl": "https://my-apple.com.ua/image/cache/catalog/products/iphone/iphone-14-pro-14-pro-max/space-black-1-700x700.png",
+    "description": "iPhone 14 Pro features a premium OLED display with ProMotion, an advanced triple-camera system, excellent performance, and a durable, modern design."
+  },
+  {
+    "id": 3,
+    "brandName": "Samsung",
+    "name": "Galaxy S23",
+    "category": "phone",
+    "price": 799,
+    "imgUrl": "https://cdn.samsungshop.com.ua/products/7482/cover/163445/Rectangle-148-%E2%80%94-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.webp",
+    "description": "Samsung Galaxy S23 offers a vivid AMOLED display, smooth user experience, versatile cameras, and a compact flagship design for daily use."
+  },
+  {
+    "id": 4,
+    "brandName": "Samsung",
+    "name": "Galaxy S23 Ultra",
+    "category": "phone",
+    "price": 1199,
+    "imgUrl": "https://cdn.samsungshop.com.ua/products/7488/cover/163430/Rectangle-104-%E2%80%94-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.webp",
+    "description": "Galaxy S23 Ultra delivers top-tier performance, a large AMOLED display, powerful cameras, S Pen support, and premium build quality."
+  },
+  {
+    "id": 5,
+    "brandName": "Xiaomi",
+    "name": "Redmi Note 12",
+    "category": "phone",
+    "price": 299,
+    "imgUrl": "https://elektron.com.ua/3276-thickbox_default/xiaomi-redmi-note-12-pro-8256gb-glacier-blue.jpg",
+    "description": "Redmi Note 12 provides excellent value with an AMOLED display, solid battery life, reliable performance, and a modern design."
+  },
+  {
+    "id": 6,
+    "brandName": "Google",
+    "name": "Pixel 7",
+    "category": "phone",
+    "price": 699,
+    "imgUrl": "https://apiua.icoola.ua/aimeos/images/products/google-pixel-7-white-256-pro_1746785405/1746785405_234089028_681dd47d37316_google-pixel-7-white-256-pro.webp",
+    "description": "Google Pixel 7 focuses on a clean Android experience, smart AI features, excellent camera quality, and smooth everyday performance."
+  },
+  {
+    "id": 7,
+    "brandName": "Apple",
+    "name": "MacBook Air M2",
+    "category": "laptop",
+    "price": 1199,
+    "imgUrl": "https://i.allo.ua/media/Rich_Review/Apple_MacBook_Air_M2/1.webp",
+    "description": "MacBook Air M2 combines a lightweight design, silent operation, powerful performance, and long battery life for work and study."
+  },
+  {
+    "id": 8,
+    "brandName": "Dell",
+    "name": "XPS 13",
+    "category": "laptop",
+    "price": 1299,
+    "imgUrl": "https://evronot.com.ua/upload/iblock/fec/fec095c9e178858be0684cf15bb28035.jpg",
+    "description": "Dell XPS 13 features a compact premium design, a high-resolution display, and fast performance for professionals and travelers."
+  },
+  {
+    "id": 9,
+    "brandName": "Lenovo",
+    "name": "ThinkPad X1 Carbon",
+    "category": "laptop",
+    "price": 1399,
+    "imgUrl": "https://p2-ofp.static.pub/fes/cms/2023/02/10/6dmutrro4s0mhknbkz259ck6tce3su835220.png",
+    "description": "ThinkPad X1 Carbon is a business-class laptop with an excellent keyboard, strong security features, and durable lightweight construction."
+  },
+  {
+    "id": 10,
+    "brandName": "HP",
+    "name": "Spectre x360",
+    "category": "laptop",
+    "price": 1249,
+    "imgUrl": "https://hp.widen.net/content/vxl0my5jue/png/vxl0my5jue.png?w=800&h=600&dpi=72&color=ffffff00",
+    "description": "HP Spectre x360 is a premium convertible laptop with a touchscreen display, strong performance, and elegant design."
+  },
+  {
+    "id": 11,
+    "brandName": "Asus",
+    "name": "ZenBook 14",
+    "category": "laptop",
+    "price": 999,
+    "imgUrl": "https://yabloki.ua/media/cache/sylius_shop_product_original/f6/9f/noutbuk-14-asus-zenbook-14-oled-ux3405ma-pp047x-intel-ultra-7-155h-32gb-1tb-ssd-intel-arc-w11p-blue_e96285a4-0d48-4800-8155-5f4b36c4db44-2.png.webp",
+    "description": "Asus ZenBook 14 delivers a slim form factor, good performance, long battery life, and a comfortable keyboard for productivity."
+  },
+  {
+    "id": 12,
+    "brandName": "LG",
+    "name": "OLED C2 55\"",
+    "category": "tv",
+    "price": 1499,
+    "imgUrl": "https://images.brownthomas.com/bta/2000353320_02.jpg?$pdp_zoom$",
+    "description": "LG OLED C2 TV offers perfect blacks, vivid colors, excellent contrast, and smooth motion for movies and gaming."
+  },
+  {
+    "id": 13,
+    "brandName": "Sony",
+    "name": "Bravia XR A80K",
+    "category": "tv",
+    "price": 1599,
+    "imgUrl": "https://www.sony.ua/image/8bc744675cdc8c8eeb5be191468f5648?fmt=png-alpha&wid=330",
+    "description": "Sony Bravia XR A80K delivers stunning OLED picture quality, rich sound, and smart TV features powered by Google TV."
+  },
+  {
+    "id": 14,
+    "brandName": "Samsung",
+    "name": "QLED Q80B",
+    "category": "tv",
+    "price": 1399,
+    "imgUrl": "https://images.samsung.com/is/image/samsung/p6pim/it/qe50q80batxzt/gallery/it-qled-q80b-qe50q80batxzt-532934296?$Q90_1248_936_F_PNG$",
+    "description": "Samsung QLED Q80B provides bright colors, deep contrast, and smooth motion handling for sports and gaming."
+  },
+  {
+    "id": 15,
+    "brandName": "TCL",
+    "name": "6-Series Roku TV",
+    "category": "tv",
+    "price": 899,
+    "imgUrl": "https://www.tcl.com/usca/content/dam/tcl/product/home-theater/6-series/carousel/R625_Front-QLED_CNET_0.png",
+    "description": "TCL 6-Series TV offers Mini-LED technology, strong brightness, and an easy-to-use smart TV interface."
+  },
+  {
+    "id": 16,
+    "brandName": "Apple",
+    "name": "iPad Pro 11",
+    "category": "tablet",
+    "price": 799,
+    "imgUrl": "https://my-apple.com.ua/image/cache/catalog/products/ipad/iPad-pro-11-2021/4-700x700.png",
+    "description": "iPad Pro 11 delivers powerful performance, a smooth display, and support for Apple Pencil and Magic Keyboard."
+  },
+  {
+    "id": 17,
+    "brandName": "Samsung",
+    "name": "Galaxy Tab S8",
+    "category": "tablet",
+    "price": 749,
+    "imgUrl": "https://pcshop.ua/image/cache/webp/catalog/tovar/planshet-samsung-galaxy-tab-s8-8-128gb-wi-fi-graphite-sm-x700nzaasek-1024x768.webp",
+    "description": "Galaxy Tab S8 offers a high-quality display, fast performance, and S Pen support for productivity and creativity."
+  },
+  {
+    "id": 18,
+    "brandName": "Lenovo",
+    "name": "Tab P11 Pro",
+    "category": "tablet",
+    "price": 599,
+    "imgUrl": "https://p1-ofp.static.pub//fes/cms/2024/05/24/4q1v8i4px9t2h7whcs1kz1gwxse5by593326.png",
+    "description": "Lenovo Tab P11 Pro features an OLED display, good multimedia performance, and solid build quality."
+  },
+  {
+    "id": 19,
+    "brandName": "Microsoft",
+    "name": "Surface Pro 9",
+    "category": "tablet",
+    "price": 999,
+    "imgUrl": "https://robby.com.ua/image/cache/catalog/tovar/files/microsoft-surface-pro-9-i516gb256gbwin11-graf%D1%96tovii/pr_2022_10_13_10_34_2_675_00-850x850.jpg",
+    "description": "Surface Pro 9 combines tablet portability with laptop-level productivity, featuring a sharp display and strong performance."
+  },
+  {
+    "id": 20,
+    "brandName": "Apple",
+    "name": "Apple Watch Series 8",
+    "category": "smartwatch",
+    "price": 399,
+    "imgUrl": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111848_apple-watch-series8.png",
+    "description": "Apple Watch Series 8 offers health tracking, fitness features, notifications, and seamless integration with iPhone."
+  },
+  {
+    "id": 21,
+    "brandName": "Samsung",
+    "name": "Galaxy Watch 5",
+    "category": "smartwatch",
+    "price": 349,
+    "imgUrl": "https://cdn.new-brz.net/app/public/models/SM-R920NZKASEK/large/w/231110130017534980.webp",
+    "description": "Galaxy Watch 5 provides fitness tracking, health monitoring, durable design, and smooth performance."
+  },
+  {
+    "id": 22,
+    "brandName": "Sony",
+    "name": "WH-1000XM5",
+    "category": "headphones",
+    "price": 399,
+    "imgUrl": "https://yabloki.ua/media/cache/sylius_shop_product_original/30/f3/navushniki-sony-wh-1000xm5-midnight-blue-wh1000xm5l-ce7_51092c3d-ede8-43a4-b3bf-7b4dd503ec96-4.png.webp",
+    "description": "Sony WH-1000XM5 headphones deliver industry-leading noise cancellation, excellent sound quality, and long battery life."
+  },
+  {
+    "id": 23,
+    "brandName": "Apple",
+    "name": "AirPods Pro 2",
+    "category": "headphones",
+    "price": 249,
+    "imgUrl": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111851_sp880-airpods-Pro-2nd-gen.png",
+    "description": "AirPods Pro 2 feature active noise cancellation, spatial audio, comfortable fit, and seamless Apple ecosystem integration."
+  },
+  {
+    "id": 24,
+    "brandName": "Bose",
+    "name": "QuietComfort 45",
+    "category": "headphones",
+    "price": 329,
+    "imgUrl": "https://assets.bosecreative.com/transform/ab738d65-f8fb-4aaa-9b30-af023ade6fd8/QC45_TripleBlack_001_RGB",
+    "description": "Bose QuietComfort 45 offers excellent noise cancellation, balanced sound, and all-day comfort for travel and work."
+  },
+  {
+    "id": 25,
+    "brandName": "JBL",
+    "name": "Live 660NC",
+    "category": "headphones",
+    "price": 199,
+    "imgUrl": "https://cdn-ultra.esempla.com/storage/webp/9e1e1108-e56e-4655-a647-a475aeef2525.webp",
+    "description": "JBL Live 660NC provides powerful sound, active noise cancellation, and long battery life in a comfortable design."
+  },
+  {
+    "id": 26,
+    "brandName": "Garmin",
+    "name": "Venu 2",
+    "category": "smartwatch",
+    "price": 399,
+    "imgUrl": "https://garmin-shop.com.ua/system/0242/6989/1.jpg",
+    "description": "Garmin Venu 2 offers detailed fitness tracking, GPS, health monitoring, and vibrant AMOLED display for active lifestyles."
+  },
+  {
+    "id": 27,
+    "brandName": "Fitbit",
+    "name": "Sense 2",
+    "category": "smartwatch",
+    "price": 299,
+    "imgUrl": "https://content.rozetka.com.ua/goods/images/big/384697147.png",
+    "description": "Fitbit Sense 2 features stress management, heart rate monitoring, sleep tracking, and a comfortable design for daily wear."
+  },
+  {
+    "id": 28,
+    "brandName": "Samsung",
+    "name": "Galaxy Buds Pro",
+    "category": "headphones",
+    "price": 199,
+    "imgUrl": "https://a.allegroimg.com/s600/11b107/54e7b8b04030b60b8d9f227b5de9/Sluchawki-Samsung-Galaxy-Buds-Pro-R190-Fioletowe-IPX7-ORYGINALNE",
+    "description": "Galaxy Buds Pro delivers immersive sound, active noise cancellation, and water-resistant design for versatile use."
+  },
+  {
+    "id": 29,
+    "brandName": "Apple",
+    "name": "Beats Studio Buds",
+    "category": "headphones",
+    "price": 149,
+    "imgUrl": "https://iplanet.one/cdn/shop/files/MJ4Y3.png?v=1691164763",
+    "description": "Beats Studio Buds offer balanced sound, active noise cancellation, and comfortable fit with seamless Apple ecosystem integration."
+  },
+  {
+    "id": 30,
+    "brandName": "Sony",
+    "name": "LinkBuds S",
+    "category": "headphones",
+    "price": 199,
+    "imgUrl": "https://images.unsplash.com/photo-1642036782353-0c0d6444313d",
+    "description": "Sony LinkBuds S provides lightweight design, clear sound, adaptive noise cancellation, and long battery life."
+  },
+  {
+    "id": 31,
+    "brandName": "Apple",
+    "name": "iPad Air 5",
+    "category": "tablet",
+    "price": 599,
+    "imgUrl": "https://images.unsplash.com/photo-1629386021578-83b72b9db56b",
+    "description": "iPad Air 5 delivers powerful performance with M1 chip, vibrant display, and supports Apple Pencil for creativity and productivity."
+  },
+  {
+    "id": 32,
+    "brandName": "Samsung",
+    "name": "Galaxy Tab A8",
+    "category": "tablet",
+    "price": 229,
+    "imgUrl": "https://images.unsplash.com/photo-1623853607493-b94ff75f755e",
+    "description": "Galaxy Tab A8 is an affordable tablet with solid display, good battery life, and enough performance for browsing and media consumption."
+  },
+  {
+    "id": 33,
+    "brandName": "Lenovo",
+    "name": "Yoga Tab 13",
+    "category": "tablet",
+    "price": 679,
+    "imgUrl": "https://images.unsplash.com/photo-1622463159335-6d1d71171f34",
+    "description": "Lenovo Yoga Tab 13 features large display, strong speakers, and versatile design for entertainment and light productivity."
+  },
+  {
+    "id": 34,
+    "brandName": "Microsoft",
+    "name": "Surface Go 3",
+    "category": "tablet",
+    "price": 399,
+    "imgUrl": "https://images.unsplash.com/photo-1620490085545-57a8f8a9e73a",
+    "description": "Surface Go 3 combines portability and Windows functionality with touchscreen, making it suitable for students and light office work."
+  },
+  {
+    "id": 35,
+    "brandName": "Apple",
+    "name": "Apple Watch SE 2",
+    "category": "smartwatch",
+    "price": 249,
+    "imgUrl": "https://images.unsplash.com/photo-1633113210983-3c4c6b4730d4",
+    "description": "Apple Watch SE 2 provides core fitness tracking, notifications, and seamless Apple ecosystem integration at a lower price point."
+  },
+  {
+    "id": 36,
+    "brandName": "Samsung",
+    "name": "Galaxy Watch 4 Classic",
+    "category": "smartwatch",
+    "price": 349,
+    "imgUrl": "https://images.unsplash.com/photo-1621530303657-0a0b63c8b68c",
+    "description": "Galaxy Watch 4 Classic combines elegant design with health monitoring, fitness tracking, and wearable notifications."
+  },
+  {
+    "id": 37,
+    "brandName": "Fitbit",
+    "name": "Versa 4",
+    "category": "smartwatch",
+    "price": 229,
+    "imgUrl": "https://images.unsplash.com/photo-1618308820745-0b8d2e9865b7",
+    "description": "Fitbit Versa 4 offers activity tracking, heart rate monitoring, sleep analysis, and a lightweight, comfortable design."
+  },
+  {
+    "id": 38,
+    "brandName": "Apple",
+    "name": "AirPods Max",
+    "category": "headphones",
+    "price": 549,
+    "imgUrl": "https://images.unsplash.com/photo-1618354693131-4b0371d1b79e",
+    "description": "AirPods Max delivers high-fidelity audio, active noise cancellation, spatial audio, and premium build quality for audiophiles."
+  },
+  {
+    "id": 39,
+    "brandName": "Bose",
+    "name": "700",
+    "category": "headphones",
+    "price": 379,
+    "imgUrl": "https://images.unsplash.com/photo-1618923823622-1f6f586f4e8c",
+    "description": "Bose 700 headphones offer excellent noise cancellation, clear audio, and modern design suitable for work and travel."
+  },
+  {
+    "id": 40,
+    "brandName": "JBL",
+    "name": "Tune 750BTNC",
+    "category": "headphones",
+    "price": 149,
+    "imgUrl": "https://images.unsplash.com/photo-1623741991881-8e0a85aaef3b",
+    "description": "JBL Tune 750BTNC features active noise cancellation, strong bass, and long battery life for everyday music enjoyment."
+  },
+  {
+    "id": 41,
+    "brandName": "Apple",
+    "name": "iPhone SE 3",
+    "category": "phone",
+    "price": 429,
+    "imgUrl": "https://images.unsplash.com/photo-1612240241371-43ef2b75f707",
+    "description": "iPhone SE 3 combines compact design, A15 Bionic performance, and a reliable camera system in an affordable iPhone model."
+  },
+  {
+    "id": 42,
+    "brandName": "Samsung",
+    "name": "Galaxy A53",
+    "category": "phone",
+    "price": 349,
+    "imgUrl": "https://images.unsplash.com/photo-1615966222371-d3d6df6034b2",
+    "description": "Galaxy A53 offers a large AMOLED display, solid performance, quad-camera setup, and long-lasting battery for mid-range users."
+  },
+  {
+    "id": 43,
+    "brandName": "Xiaomi",
+    "name": "Mi 12",
+    "category": "phone",
+    "price": 599,
+    "imgUrl": "https://images.unsplash.com/photo-1615082920827-7f0b621e90e3",
+    "description": "Xiaomi Mi 12 delivers flagship performance, AMOLED display, versatile cameras, and fast charging in a sleek design."
+  },
+  {
+    "id": 44,
+    "brandName": "Apple",
+    "name": "MacBook Pro 14",
+    "category": "laptop",
+    "price": 1999,
+    "imgUrl": "https://images.unsplash.com/photo-1616466726070-dc2df7d65d08",
+    "description": "MacBook Pro 14 with M1 Pro chip provides high performance, ProMotion display, and long battery life for professional users."
+  },
+  {
+    "id": 45,
+    "brandName": "Dell",
+    "name": "XPS 15",
+    "category": "laptop",
+    "price": 1799,
+    "imgUrl": "https://images.unsplash.com/photo-1617129789365-7c38d3e6b902",
+    "description": "Dell XPS 15 offers a large high-resolution display, powerful performance, and premium build for content creators and professionals."
+  },
+  {
+    "id": 46,
+    "brandName": "HP",
+    "name": "Envy 13",
+    "category": "laptop",
+    "price": 999,
+    "imgUrl": "https://images.unsplash.com/photo-1616250348913-df09a1e77f6c",
+    "description": "HP Envy 13 provides a lightweight design, solid performance, and high-quality display suitable for students and professionals."
+  },
+  {
+    "id": 47,
+    "brandName": "Asus",
+    "name": "ROG Zephyrus G14",
+    "category": "laptop",
+    "price": 1449,
+    "imgUrl": "https://images.unsplash.com/photo-1617161651368-1e1aa5a7b22b",
+    "description": "ROG Zephyrus G14 delivers gaming-level performance in a compact laptop with high refresh rate display and long battery life."
+  },
+  {
+    "id": 48,
+    "brandName": "LG",
+    "name": "OLED B2 65\"",
+    "category": "tv",
+    "price": 1599,
+    "imgUrl": "https://images.unsplash.com/photo-1618187892349-6e3efb92b4d1",
+    "description": "LG OLED B2 provides stunning OLED visuals, deep blacks, vibrant colors, and immersive experience for movies and games."
+  },
+  {
+    "id": 49,
+    "brandName": "Sony",
+    "name": "Bravia X90J",
+    "category": "tv",
+    "price": 1299,
+    "imgUrl": "https://images.unsplash.com/photo-1618310132742-8f73e6d17420",
+    "description": "Sony Bravia X90J delivers LED HDR visuals, smooth motion, and smart TV features with Google TV for entertainment."
+  },
+  {
+    "id": 50,
+    "brandName": "Samsung",
+    "name": "QLED Q70B",
+    "category": "tv",
+    "price": 1199,
+    "imgUrl": "https://images.unsplash.com/photo-1618410079451-71b7e2f4d5f3",
+    "description": "Samsung QLED Q70B provides bright colors, high contrast, and smooth motion for sports, movies, and gaming."
+  },
+  {
+    "id": 51,
+    "brandName": "Apple",
+    "name": "iPhone 13",
+    "category": "phone",
+    "price": 699,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767061-b67640b9ed05",
+    "description": "iPhone 13 offers dual-camera system, OLED display, fast performance with A15 chip, and reliable battery life."
+  },
+  {
+    "id": 52,
+    "brandName": "Apple",
+    "name": "iPhone 13 Pro",
+    "category": "phone",
+    "price": 999,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767123-97f5f7c7e2d5",
+    "description": "iPhone 13 Pro features ProMotion display, triple-camera system, improved low-light performance, and premium design."
+  },
+  {
+    "id": 53,
+    "brandName": "Samsung",
+    "name": "Galaxy S22",
+    "category": "phone",
+    "price": 749,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767177-2a2b7f8b48c9",
+    "description": "Galaxy S22 offers dynamic AMOLED display, strong performance, multiple cameras, and modern Android experience."
+  },
+  {
+    "id": 54,
+    "brandName": "Samsung",
+    "name": "Galaxy S22 Ultra",
+    "category": "phone",
+    "price": 1149,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767231-8b8e6f8c7f91",
+    "description": "Galaxy S22 Ultra delivers premium design, AMOLED display, S Pen support, and top-tier performance for power users."
+  },
+  {
+    "id": 55,
+    "brandName": "Xiaomi",
+    "name": "Mi 11",
+    "category": "phone",
+    "price": 599,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767285-6e6f7a8b8d7c",
+    "description": "Xiaomi Mi 11 offers AMOLED display, powerful chipset, good cameras, and fast charging in a sleek design."
+  },
+  {
+    "id": 56,
+    "brandName": "Google",
+    "name": "Pixel 6",
+    "category": "phone",
+    "price": 599,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767339-5a5b7c8d9e1f",
+    "description": "Google Pixel 6 provides clean Android experience, AI features, reliable cameras, and smooth daily performance."
+  },
+  {
+    "id": 57,
+    "brandName": "Apple",
+    "name": "MacBook Pro 16",
+    "category": "laptop",
+    "price": 2499,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767383-3b3c7e8d8f9a",
+    "description": "MacBook Pro 16 offers top-tier M1 Pro/Max performance, large display, and excellent battery life for professional users."
+  },
+  {
+    "id": 58,
+    "brandName": "Dell",
+    "name": "XPS 17",
+    "category": "laptop",
+    "price": 2199,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767427-2d2e7f8d9a1b",
+    "description": "Dell XPS 17 delivers large high-resolution display, powerful performance, and premium build quality for creatives."
+  },
+  {
+    "id": 59,
+    "brandName": "HP",
+    "name": "Spectre x360 16",
+    "category": "laptop",
+    "price": 1649,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767471-6f6f8d8e9b2c",
+    "description": "HP Spectre x360 16 is a versatile 2-in-1 laptop with touchscreen, strong performance, and elegant design."
+  },
+  {
+    "id": 60,
+    "brandName": "Lenovo",
+    "name": "ThinkPad X1 Extreme",
+    "category": "laptop",
+    "price": 2099,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767515-7a7b8e9c0c3d",
+    "description": "ThinkPad X1 Extreme offers high-end performance, premium build, and excellent keyboard for business and creative work."
+  },
+  {
+    "id": 61,
+    "brandName": "Asus",
+    "name": "ROG Strix G15",
+    "category": "laptop",
+    "price": 1499,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767559-8b8c9d0d1e4f",
+    "description": "ROG Strix G15 is a gaming laptop with high refresh rate display, powerful GPU, and fast CPU for immersive gameplay."
+  },
+  {
+    "id": 62,
+    "brandName": "LG",
+    "name": "OLED C1 65\"",
+    "category": "tv",
+    "price": 1899,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767603-9c9d0e1f2g5h",
+    "description": "LG OLED C1 65\" delivers perfect blacks, vivid colors, and cinematic experience for home entertainment and gaming."
+  },
+  {
+    "id": 63,
+    "brandName": "Sony",
+    "name": "Bravia A90J",
+    "category": "tv",
+    "price": 1999,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767647-0d0e1f2g3h6i",
+    "description": "Sony Bravia A90J OLED provides stunning picture quality, smooth motion, and smart TV features for immersive viewing."
+  },
+  {
+    "id": 64,
+    "brandName": "Samsung",
+    "name": "QLED QN90A",
+    "category": "tv",
+    "price": 1799,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767691-1e1f2g3h4i7j",
+    "description": "Samsung QLED QN90A offers bright colors, high contrast, and excellent HDR for sports, movies, and gaming."
+  },
+  {
+    "id": 65,
+    "brandName": "TCL",
+    "name": "5-Series Roku TV",
+    "category": "tv",
+    "price": 699,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767735-2f2g3h4i5j8k",
+    "description": "TCL 5-Series TV features good brightness, solid HDR performance, and easy-to-use smart TV interface."
+  },
+  {
+    "id": 66,
+    "brandName": "Hisense",
+    "name": "U7G",
+    "category": "tv",
+    "price": 899,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767779-3g3h4i5j6k9l",
+    "description": "Hisense U7G provides strong brightness, good contrast, and smooth motion handling for gaming and movies."
+  },
+  {
+    "id": 67,
+    "brandName": "Apple",
+    "name": "iPad Mini 6",
+    "category": "tablet",
+    "price": 499,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767823-4h4i5j6k7l0m",
+    "description": "iPad Mini 6 offers compact design, powerful performance, Apple Pencil support, and a vibrant display."
+  },
+  {
+    "id": 68,
+    "brandName": "Samsung",
+    "name": "Galaxy Tab S7",
+    "category": "tablet",
+    "price": 649,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767867-5i5j6k7l8m1n",
+    "description": "Galaxy Tab S7 features large AMOLED display, S Pen support, and smooth performance for work and creativity."
+  },
+  {
+    "id": 69,
+    "brandName": "Lenovo",
+    "name": "Tab M10 Plus",
+    "category": "tablet",
+    "price": 229,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767911-6j6k7l8m9n2o",
+    "description": "Lenovo Tab M10 Plus provides solid display, good battery life, and reliable performance for everyday tasks."
+  },
+  {
+    "id": 70,
+    "brandName": "Microsoft",
+    "name": "Surface Laptop Go 2",
+    "category": "laptop",
+    "price": 599,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767955-7k7l8m9n0o3p",
+    "description": "Surface Laptop Go 2 is a lightweight Windows laptop for students and office work, featuring a touchscreen and solid battery life."
+  },
+  {
+    "id": 71,
+    "brandName": "Apple",
+    "name": "Apple Watch Series 7",
+    "category": "smartwatch",
+    "price": 399,
+    "imgUrl": "https://images.unsplash.com/photo-1631078767999-8l8m9n0o1p4q",
+    "description": "Apple Watch Series 7 offers larger display, fitness tracking, heart monitoring, and seamless integration with iPhone."
+  },
+  {
+    "id": 72,
+    "brandName": "Samsung",
+    "name": "Galaxy Watch 3",
+    "category": "smartwatch",
+    "price": 349,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768043-9m9n0o1p2q5r",
+    "description": "Galaxy Watch 3 delivers health tracking, notifications, and elegant design for everyday use."
+  },
+  {
+    "id": 73,
+    "brandName": "Fitbit",
+    "name": "Charge 5",
+    "category": "smartwatch",
+    "price": 179,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768087-0n0o1p2q3r6s",
+    "description": "Fitbit Charge 5 provides activity tracking, heart rate monitoring, sleep analysis, and lightweight design for daily wear."
+  },
+  {
+    "id": 74,
+    "brandName": "Apple",
+    "name": "AirPods 3",
+    "category": "headphones",
+    "price": 179,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768131-1o1p2q3r4s7t",
+    "description": "AirPods 3 feature spatial audio, seamless Apple ecosystem integration, and comfortable design for all-day use."
+  },
+  {
+    "id": 75,
+    "brandName": "Sony",
+    "name": "WH-XB910N",
+    "category": "headphones",
+    "price": 249,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768175-2p2q3r4s5t8u",
+    "description": "Sony WH-XB910N delivers deep bass, active noise cancellation, and long battery life for immersive audio experiences."
+  },
+  {
+    "id": 76,
+    "brandName": "Bose",
+    "name": "QuietComfort Earbuds",
+    "category": "headphones",
+    "price": 279,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768219-3q3r4s5t6u9v",
+    "description": "Bose QuietComfort Earbuds provide excellent noise cancellation, clear sound, and comfortable fit for all-day listening."
+  },
+  {
+    "id": 77,
+    "brandName": "JBL",
+    "name": "Club 950NC",
+    "category": "headphones",
+    "price": 179,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768263-4r4s5t6u7v0w",
+    "description": "JBL Club 950NC offers noise cancellation, balanced sound, and strong battery life for travel and daily use."
+  },
+  {
+    "id": 78,
+    "brandName": "Apple",
+    "name": "iPhone 12",
+    "category": "phone",
+    "price": 599,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768307-5s5t6u7v8w1x",
+    "description": "iPhone 12 features OLED display, dual-camera system, and A14 Bionic chip for fast and smooth performance."
+  },
+  {
+    "id": 79,
+    "brandName": "Samsung",
+    "name": "Galaxy Note 20",
+    "category": "phone",
+    "price": 699,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768351-6t6u7v8w9x2y",
+    "description": "Galaxy Note 20 provides large AMOLED display, S Pen support, and reliable performance for productivity and creativity."
+  },
+  {
+    "id": 80,
+    "brandName": "Xiaomi",
+    "name": "Mi 10",
+    "category": "phone",
+    "price": 499,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768395-7u7v8w9x0y3z",
+    "description": "Xiaomi Mi 10 delivers strong performance, AMOLED display, good camera setup, and fast charging in a sleek design."
+  },
+  {
+    "id": 81,
+    "brandName": "Apple",
+    "name": "MacBook Air M1",
+    "category": "laptop",
+    "price": 999,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768439-8v8w9x0y1z4a",
+    "description": "MacBook Air M1 combines portability, quiet operation, long battery life, and fast performance for everyday tasks."
+  },
+  {
+    "id": 82,
+    "brandName": "Dell",
+    "name": "Inspiron 15",
+    "category": "laptop",
+    "price": 799,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768483-9w9x0y1z2a5b",
+    "description": "Dell Inspiron 15 provides solid performance, full HD display, and affordable build for students and office use."
+  },
+  {
+    "id": 83,
+    "brandName": "Lenovo",
+    "name": "IdeaPad 5",
+    "category": "laptop",
+    "price": 699,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768527-0x0y1z2a3b6c",
+    "description": "Lenovo IdeaPad 5 offers lightweight design, solid performance, and good display for daily productivity."
+  },
+  {
+    "id": 84,
+    "brandName": "HP",
+    "name": "Pavilion 14",
+    "category": "laptop",
+    "price": 649,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768571-1y1z2a3b4c7d",
+    "description": "HP Pavilion 14 features compact design, reliable performance, and Full HD display suitable for students and professionals."
+  },
+  {
+    "id": 85,
+    "brandName": "Asus",
+    "name": "VivoBook 15",
+    "category": "laptop",
+    "price": 599,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768615-2z2a3b4c5d8e",
+    "description": "Asus VivoBook 15 delivers solid performance, slim design, and long battery life for everyday use."
+  },
+  {
+    "id": 86,
+    "brandName": "LG",
+    "name": "OLED C1 55\"",
+    "category": "tv",
+    "price": 1499,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768659-3a3b4c5d6e9f",
+    "description": "LG OLED C1 provides stunning visuals, deep blacks, and vibrant colors for movies, gaming, and entertainment."
+  },
+  {
+    "id": 87,
+    "brandName": "Sony",
+    "name": "Bravia X85J",
+    "category": "tv",
+    "price": 1099,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768703-4b4c5d6e7f0g",
+    "description": "Sony Bravia X85J delivers LED HDR visuals, smooth motion handling, and smart TV functionality for modern entertainment."
+  },
+  {
+    "id": 88,
+    "brandName": "Samsung",
+    "name": "QLED Q70A",
+    "category": "tv",
+    "price": 1199,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768747-5c5d6e7f8g1h",
+    "description": "Samsung QLED Q70A offers bright colors, high contrast, and good motion performance for sports, movies, and gaming."
+  },
+  {
+    "id": 89,
+    "brandName": "TCL",
+    "name": "4-Series Roku TV",
+    "category": "tv",
+    "price": 399,
+    "imgUrl": "https://images.unsplash.com/photo-1631078768791-6d6e7f8g9h2i",
+    "description": "TCL 4-Series TV provides solid picture quality, simple smart TV interface, and affordable price"
+  }
+]
