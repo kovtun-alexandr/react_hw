@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name": "Олена Коваль",
+    "subject": "Математика",
+    "photo": "https://cdn-icons-png.flaticon.com/512/168/168723.png"
+  },
+  {
+    "id": "2",
+    "name": "Іван Петренко",
+    "subject": "Фізика",
+    "photo": "https://cdn-icons-png.flaticon.com/512/168/168724.png"
+  },
+  {
+    "id": "3",
+    "name": "Наталія Сидорова",
+    "subject": "Історія",
+    "photo": "https://cdn-icons-png.flaticon.com/512/168/168725.png"
+  },
+  {
+    "id": 1766931656334,
+    "name": "Аарон Бек",
+    "subject": "Психологія",
+    "photo": "https://img.freepik.com/free-vector/cheerful-cartoon-man-with-glasses_1308-165920.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 1766932257565,
+    "name": "Девід Балтімор",
+    "subject": "Біологія",
+    "photo": "https://img.freepik.com/free-photo/3d-rendering-elder-person-portrait_23-2150964612.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 1766943755565,
+    "name": "Олена Крижана",
+    "subject": "Математика/Фізика",
+    "photo": "https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303097.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 1766945925809,
+    "name": "Модна Качка",
+    "subject": "Біологія",
+    "photo": "https://slovoichas.in.ua/wp-content/uploads/2024/05/61e111f016a9c472eb21d6941663a82a.jpg"
+  }
+]
