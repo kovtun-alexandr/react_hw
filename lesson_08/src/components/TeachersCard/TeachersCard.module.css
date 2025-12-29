@@ -1,0 +1,90 @@
+.teacher-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: green;
+    padding: 15px;
+    background-color: beige;
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    border-radius: .5rem;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    transition: .3s;
+}
+
+.teacher-card:hover {
+    border-color: rgba(0, 128, 0, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(0, 128, 0, 0.4);
+}
+
+.teacher-card.active {
+    border-color: rgba(0, 128, 0, 0.5);
+    box-shadow: 4px 4px 8px 0px rgba(0, 128, 0, 0.2);
+}
+
+.teacher-card__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    max-width: 150px;
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: ivory;
+    overflow: hidden;
+}
+
+.teacher-card__header img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.teacher-card__body {
+    flex-grow: 1;
+}
+
+.teacher-card__body h2,
+.teacher-card__body p {
+    margin: 0;
+}
+
+.teacher-card__body p {
+    color: grey;
+    font-weight: 700;
+}
+
+.teacher-card__body p span {
+    color: darkgray;
+}
+
+.teacher-card__footer button {
+    background-color: cornflowerblue;
+    box-shadow: 0px 0px 8px 4px rgba(100, 149, 237, 0.3);
+    transition: .3s;
+}
+
+.teacher-card__footer button:hover {
+    border-color: transparent;
+    background-color: blue;
+    color: #fff;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 255, 0.3);
+
+}
+
+.active .teacher-card__footer button {
+    background-color: green;
+    box-shadow: 0px 0px 8px 4px rgba(100, 149, 237, 0.3);
+}
+
+.active .teacher-card__footer button:hover {
+    border-color: green;
+    background-color: #fff;
+    color: green;
+    box-shadow: 0px 0px 10px 4px rgba(0, 128, 0, 0.3);
+}
+
+@media (max-width: 650px) {
+    .teacher-card {
+        flex-direction: column;
+    }
+}

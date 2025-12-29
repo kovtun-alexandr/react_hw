@@ -1,0 +1,285 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: green;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  /* display: flex; */
+  /* place-items: center; */
+  /* min-width: 320px; */
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button,
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: green;
+  box-shadow: 0px 0px 10px 4px rgba(0, 128, 0, 0.2);
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover,
+.btn:hover {
+  border-color: green;
+  color: green;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 4px rgba(0, 128, 0, 0.4);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.wrapper>.page {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.flx {
+  display: flex;
+  gap: 1rem;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.btn-blue {
+  background-color: cornflowerblue;
+  box-shadow: 0px 0px 8px 4px rgba(100, 149, 237, 0.3);
+  transition: .3s;
+}
+
+.btn-blue:hover {
+  border-color: transparent;
+  background-color: blue;
+  color: #fff;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 255, 0.3);
+}
+
+.btn-red {
+  background-color: red;
+  box-shadow: 0px 0px 8px 4px rgba(255, 0, 0, 0.3);
+  transition: .3s;
+}
+
+.btn-red:hover {
+  border-color: red;
+  background-color: #fff;
+  color: red;
+  box-shadow: 0px 0px 10px 4px rgba(255, 0, 0, 0.5);
+}
+
+.btn-gray {
+  align-self: start;
+  background-color: gray;
+  color: #fff;
+  box-shadow: 0px 0px 8px 4px rgba(128, 128, 128, 0.3);
+  transition: .3s;
+}
+
+.btn-gray:hover {
+  border-color: gray;
+  color: gray;
+  box-shadow: 0px 0px 8px 4px rgba(128, 128, 128, 0.5);
+}
+
+.home,
+.teachers,
+.meeting,
+.info,
+.not-found,
+.teachers-form {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100dvh; */
+  margin-block: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f1ebeb;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.home>*:not(:last-child),
+.teachers>*:not(:last-child),
+.meeting>*:not(:last-child),
+.info>*:not(:last-child),
+.info-contant>*:not(:last-child),
+.not-found>*:not(:last-child),
+.teachers-form>*:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.info-contant,
+.not-found__inner {
+  flex-grow: 1;
+}
+
+.teachers__head {
+  display: flex;
+  gap: 1rem;
+}
+
+.teachers__list,
+.meeting__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.teachers__list>*:not(:last-child),
+.teachers__item>*:not(:last-child),
+.meeting__list>*:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.teachers__btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.meeting__info {
+  color: #213547;
+  background-color: darkseagreen;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.meeting__btn {
+  align-self: start;
+}
+
+.info-contant {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-contant p {
+  color: #213547;
+}
+
+.form-teachers {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-teachers>*:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.techers-form__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.techers-form__btns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .teachers__head,
+  .techers-form__btns {
+    flex-direction: column;
+  }
+
+  .techers-form__btns a {
+    width: 100%;
+  }
+
+  .teachers__btns {
+    grid-template-columns: 1fr;
+  }
+}
