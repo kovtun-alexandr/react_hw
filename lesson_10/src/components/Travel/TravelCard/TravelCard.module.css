@@ -1,0 +1,128 @@
+.route {
+    list-style: none;
+    position: relative;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #aba4a4;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.way {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px 0;
+}
+
+.way div {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.way div:first-child,
+.way div:last-child {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+    margin-block-end: -10px;
+}
+
+.way div:first-child::after,
+.way div:last-child::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+
+}
+
+.way div:last-child::after {
+    right: 0;
+}
+
+.way::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 16px;
+    right: 16px;
+    height: 4px;
+    background-color: #007bff;
+    z-index: 0;
+}
+
+.way div:nth-child(2) {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 500;
+    color: #135091;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.inner {
+    display: flex;
+    gap: 10px;
+}
+
+.transport {
+    font-size: 22px;
+    color: #3c3c3c;
+}
+
+.price {
+    color: #3c3c3c;
+    align-self: end;
+}
+
+.price span {
+    font-weight: 700;
+    color: #084d8b;
+}
+
+@media (min-width: 520px) {
+    .inLine.route {
+        flex-direction: row;
+    }
+
+    .inLine .way {
+        width: 40%;
+    }
+
+    .inLine .body {
+        justify-content: end;
+    }
+
+    .inLine .price {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 425px) {
+    .inner {
+        grid-template-columns: 1fr;
+    }
+
+    .translator,
+    .price {
+        grid-column: 1;
+    }
+}

@@ -1,0 +1,121 @@
+.hotel-card {
+    position: relative;
+    list-style: none;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #aba4a4;
+    /* той самий фон, що й у .route */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.img {
+    display: flex;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    background-color: #9b9797;
+    border-radius: 6px;
+}
+
+.img img {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 135px;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.city span {
+    font-weight: 600;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.descr {
+    flex-grow: 1;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.price span {
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+.day-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day-counrer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #084d8b;
+}
+
+.day-tottal {
+    font-weight: 700;
+    color: #084d8b;
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+    .inLine .img {
+        aspect-ratio: auto;
+    }
+}
+
+
+@media (min-width: 520px) {
+    .inLine.hotel-card {
+        flex-direction: row;
+    }
+
+    .inLine .img {
+        width: 40%;
+    }
+
+    .inLine .day-inner {
+        margin-block-end: 20px;
+    }
+
+}

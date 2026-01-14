@@ -1,0 +1,15 @@
+.headerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-block: 20px;
+}
+
+.logo {
+    width: 60px;
+}
+
+.logo img {
+    width: 100%;
+}

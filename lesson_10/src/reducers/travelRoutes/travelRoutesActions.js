@@ -1,0 +1,5 @@
+export const travelRoutesActions = {
+    TOGGLE_SELECTED: 'TOGGLE_SELECTED',
+    SET_TRANSPORT: 'SET_TRANSPORT',
+    RESET_SELECTS: "RESET_SELECTS",
+}

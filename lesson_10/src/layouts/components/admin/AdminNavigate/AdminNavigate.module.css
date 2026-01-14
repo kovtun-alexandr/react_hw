@@ -1,0 +1,43 @@
+.adminNavigave {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    position: relative;
+    color: #fff;
+    transition: .3s;
+}
+
+/* .link::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #d3af37;
+    left: 50%;
+    bottom: -2px;
+    transition: .3s;
+} */
+
+.link:hover {
+    color: #d3af37;
+}
+
+.link:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.active {
+    color: #d3af37;
+}
+
+.active::after {
+    left: 0;
+    width: 100%;
+}
+
+.active:hover {
+    cursor: default;
+}

@@ -1,0 +1,19 @@
+.summer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    color: #333;
+    margin-block: 15px;
+}
+
+.count span {
+    font-weight: 600;
+    color: #084d8b;
+}
+
+.total-price {
+    font-weight: 700;
+    font-size: 20px;
+    color: #084d8b;
+}
