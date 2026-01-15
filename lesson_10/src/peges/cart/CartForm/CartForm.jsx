@@ -19,7 +19,10 @@ function CartForm({ onSubmit, totalSum, count, onResets }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form
+            className={styles.form}
+            onSubmit={handleSubmit}
+        >
             <TextInputFild
                 label="First name"
                 name="firstName"
