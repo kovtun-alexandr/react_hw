@@ -66,16 +66,26 @@ app.get('/api/products/search', async (req, res) => {
 
 // Додавання продукту
 app.post('/api/products', async (req, res) => {
-  const { name, price, imageUrl } = req.body
-  if (!name || !price || !imageUrl) {
+  const {
+    name,
+    brandName,
+    category,
+    description,
+    price,
+    imgUrl
+  } = req.body
+  if (!name || !brandName || !category || !description || !price || !imgUrl) {
     return res.status(400).json({ error: 'Missing required fields' })
   }
   const products = await readProducts()
   const newProduct = {
     id: products.length ? Math.max(...products.map((p) => p.id)) + 1 : 1,
     name,
+    brandName,
+    category,
+    description,
     price,
-    imageUrl,
+    imgUrl,
   }
   products.push(newProduct)
   await writeProducts(products)
@@ -85,8 +95,15 @@ app.post('/api/products', async (req, res) => {
 // Оновлення продукту
 app.put('/api/products/:id', async (req, res) => {
   const id = parseInt(req.params.id)
-  const { name, price, imageUrl } = req.body
-  if (!name || !price || !imageUrl) {
+  const {
+    name,
+    brandName,
+    category,
+    description,
+    price,
+    imgUrl
+  } = req.body
+  if (!name || !brandName || !category || !description || !price || !imgUrl) {
     return res.status(400).json({ error: 'Missing required fields' })
   }
   const products = await readProducts()
@@ -94,7 +111,15 @@ app.put('/api/products/:id', async (req, res) => {
   if (index === -1) {
     return res.status(404).json({ error: 'Product not found' })
   }
-  products[index] = { id, name, price, imageUrl }
+  products[index] = {
+    id,
+    name,
+    brandName,
+    category,
+    description,
+    price,
+    imgUrl
+  }
   await writeProducts(products)
   res.json(products[index])
 })
