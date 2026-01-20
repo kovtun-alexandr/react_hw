@@ -1,0 +1,20 @@
+.filter {
+    background: var(--cp-panel);
+    border: 1px solid var(--cp-border);
+    box-shadow: var(--cp-glow-cyan);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.filter-btn {
+    align-self: end;
+}
+
+@media (max-width: 450px) {
+    .filter {
+        flex-direction: column;
+    }
+}

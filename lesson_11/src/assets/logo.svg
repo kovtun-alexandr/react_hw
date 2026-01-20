@@ -1,0 +1,38 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Neon glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Frame gradient -->
+    <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="220" height="220" rx="26" fill="#020617"/>
+
+  <!-- Frame -->
+  <rect x="2" y="2" width="216" height="216" rx="24" fill="none" stroke="url(#frameGradient)" stroke-width="4"/>
+
+  <!-- OK text stretched vertically -->
+  <text x="110" y="110" text-anchor="middle" dominant-baseline="middle"
+        font-family="JetBrains Mono, monospace" font-size="180" font-weight="900"
+        letter-spacing="0" fill="url(#textGradient)" filter="url(#glow)"
+        transform="scale(1, 1.15)">
+    OK
+  </text>
+</svg>

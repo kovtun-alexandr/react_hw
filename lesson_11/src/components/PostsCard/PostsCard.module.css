@@ -1,0 +1,13 @@
+.post-card {
+    background: var(--cp-panel);
+    border: 1px solid var(--cp-border);
+    box-shadow: var(--cp-glow-cyan);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card>*:not(:last-child) {
+    margin-bottom: 1rem;
+}
