@@ -43,6 +43,23 @@ app.get('/api/products', async (req, res) => {
   res.json(products)
 })
 
+// Пошук за назвою (частковий збіг)
+app.get('/api/products/search', async (req, res) => {
+  const query = req.query.q?.toLowerCase()
+  const products = await readProducts()
+
+  if (!query) {
+    return res.json(products)
+  }
+
+  const filtered = products.filter(product =>
+    product.name.toLowerCase().includes(query) ||
+    product.brandName.toLowerCase().includes(query)
+  )
+
+  res.json(filtered)
+})
+
 // Отримання продукту за ID (НОВИЙ МАРШРУТ)
 app.get('/api/products/:id', async (req, res) => {
   const id = parseInt(req.params.id)
@@ -52,16 +69,6 @@ app.get('/api/products/:id', async (req, res) => {
     return res.status(404).json({ error: 'Product not found' })
   }
   res.json(product)
-})
-
-// Пошук за назвою (частковий збіг)
-app.get('/api/products/search', async (req, res) => {
-  const query = req.query.q ? req.query.q.toLowerCase() : ''
-  const products = await readProducts()
-  const filtered = products.filter((product) =>
-    product.name.toLowerCase().includes(query)
-  )
-  res.json(filtered)
 })
 
 // Додавання продукту

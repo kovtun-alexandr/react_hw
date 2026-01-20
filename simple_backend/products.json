@@ -799,5 +799,14 @@
     "price": 399,
     "imgUrl": "https://images.unsplash.com/photo-1631078768791-6d6e7f8g9h2i",
     "description": "TCL 4-Series TV provides solid picture quality, simple smart TV interface, and affordable price"
+  },
+  {
+    "id": 90,
+    "name": "iPhone 17",
+    "brandName": "Apple",
+    "category": "phone",
+    "description": "The iPhone 17 is a significant upgrade featuring the powerful A19 chip, a brighter Super Retina XDR display with ProMotion up to 120Hz, and an advanced 48MP Dual Fusion camera system with 2x optical-quality telephoto for stunning photos, plus an 18MP Center Stage front camera, all running iOS 26 with deep Apple Intelligence integration for enhanced AI features, delivering strong performance, battery life, and a durable Ceramic Shield front. ",
+    "price": "1000",
+    "imgUrl": "https://m-cdn.phonearena.com/images/phones/85533-350/Apple-iPhone-17.webp"
   }
 ]
