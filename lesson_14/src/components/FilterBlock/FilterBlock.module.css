@@ -1,0 +1,34 @@
+.filter {
+    background: var(--cp-surface);
+    border: 1px solid var(--cp-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    box-shadow: var(--cp-glow-cyan);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Ліва частина з селектом та інпутами */
+.sort {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    gap: 1rem;
+    flex: 1;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .filter {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+
+    .sort {
+        max-width: 100%;
+    }
+}

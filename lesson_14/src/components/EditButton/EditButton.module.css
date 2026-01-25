@@ -1,0 +1,23 @@
+.edit {
+    /* align-self: flex-end; */
+
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.2);
+    /* напівпрозорий фон */
+    backdrop-filter: blur(6px);
+    /* ефект скла */
+    -webkit-backdrop-filter: blur(6px);
+    /* для Safari */
+
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+
+.edit:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

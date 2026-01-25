@@ -1,0 +1,293 @@
+:root {
+  /* ====== BASE DARK COLORS ====== */
+  --cp-bg-0: #030712;
+  /* ультра-темний синьо-чорний */
+  --cp-bg-1: #0B0F19;
+  /* темний космічний синій */
+  --cp-bg-2: #11131F;
+  /* нічний синьо-фіолетовий */
+  --cp-panel: #0D0221;
+  /* фіолетовий космос для блоків */
+  --cp-surface: #1A1D2E;
+  /* поверхні/карточки */
+
+  /* ====== NEON ACCENTS ====== */
+  --cp-neon-cyan: #00F6FF;
+  --cp-neon-pink: #FF00E6;
+  --cp-neon-blue: #3A7BFF;
+  --cp-neon-green: #00FF8F;
+  --cp-neon-purple: #7A00FF;
+
+  /* ====== TEXT COLORS ====== */
+  --cp-text-main: #E4E8FF;
+  /* світлий текст */
+  --cp-text-dim: #8891B8;
+  /* приглушений */
+  --cp-text-neon: #00F6FF;
+  /* акцент */
+
+  /* ====== BORDERS / LINES ====== */
+  --cp-border: rgba(0, 246, 255, 0.3);
+  --cp-border-strong: rgba(255, 0, 230, 0.5);
+
+  /* ====== SHADOWS / GLOWS ====== */
+  --cp-glow-cyan: 0 0 12px #00F6FF;
+  --cp-glow-pink: 0 0 12px #FF00E6;
+  --cp-glow-green: 0 0 12px #00FF8F;
+  --cp-glow-purple: 0 0 12px #7A00FF;
+
+  /* ====== SPECIAL ====== */
+  --cp-grid-line: rgba(0, 246, 255, 0.06);
+  /* для сітки на фоні */
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  box-sizing: border-box;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--cp-surface);
+  color: var(--cp-text-main);
+  font-family: "Orbitron", sans-serif;
+}
+
+.btn {
+  background: var(--cp-neon-pink);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--cp-neon-pink);
+  transition: .3s;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 0 25px var(--cp-neon-blue);
+    color: var(--cp-neon-cyan);
+    transform: translateY(-2px);
+  }
+}
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input,
+select {
+  padding: .6rem;
+  border-radius: 4px;
+  background-color: var(--cp-neon-cyan);
+  transition: .3s;
+
+  &:hover {
+    border-color: var(--cp-neon-purple);
+    box-shadow: 0 0 15px var(--cp-neon-purple);
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: var(--cp-neon-purple);
+    outline-color: var(--cp-neon-blue);
+    box-shadow: var(--cp-glow-purple);
+  }
+
+  &:disabled {
+    background-color: var(--cp-text-dim);
+  }
+
+  &:hover:disabled {
+    box-shadow: none;
+    border-color: transparent;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  >main {
+    flex-grow: 1;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--cp-text-neon);
+}
+
+h3 {
+  font-size: 28px;
+  color: var(--cp-text-dim);
+}
+
+h4 {
+  font-size: 22px;
+  color: var(--cp-text-neon);
+
+  span {
+    color: var(--cp-neon-pink);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+.flx-r {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flx-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.g-1 {
+  gap: 1rem;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.ai-s {
+  align-items: start;
+}
+
+.patients,
+.doctors,
+.appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 12px;
+  color: var(--cp-text-main);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  /* додає горизонтальний скрол */
+  -webkit-overflow-scrolling: touch;
+  /* плавний скрол на мобільних */
+}
+
+.table-wrapper table {
+  min-width: 800px;
+  /* або більше, залежно від кількості колонок */
+  border-collapse: collapse;
+}
+
+/* Заголовок сторінки */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--cp-neon-cyan);
+  text-shadow: var(--cp-glow-cyan);
+}
+
+/* Таблиця */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--cp-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--cp-glow-blue);
+}
+
+/* Шапка таблиці */
+thead {
+  background: var(--cp-panel);
+}
+
+thead th {
+  padding: 0.8rem;
+  text-align: left;
+  color: var(--cp-neon-pink);
+  font-weight: 600;
+  border-bottom: 2px solid var(--cp-border-strong);
+}
+
+/* Рядки таблиці */
+tbody tr:nth-child(odd) {
+  background: var(--cp-bg-2);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--cp-surface);
+}
+
+tbody tr>td:last-child {
+  display: flex;
+  gap: .5rem;
+}
+
+tbody td {
+  padding: 0.7rem;
+}
+
+/* Посилання тільки для пацієнтів */
+tbody td a {
+  color: var(--cp-neon-cyan);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+tbody td a:hover {
+  color: var(--cp-neon-pink);
+  text-shadow: var(--cp-glow-pink);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  thead th,
+  tbody td {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

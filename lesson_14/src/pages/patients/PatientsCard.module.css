@@ -1,0 +1,76 @@
+.patient {
+    background: var(--cp-surface);
+    border: 1px solid var(--cp-border);
+    border-radius: 12px;
+    padding: 2rem;
+    color: var(--cp-text-main);
+    box-shadow: var(--cp-glow-cyan);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Заголовок */
+.patient h1 {
+    /* font-size: 1.6rem; */
+    margin-bottom: 1.5rem;
+    color: var(--cp-text-neon);
+}
+
+.patient h1 span {
+    color: var(--cp-neon-pink);
+}
+
+/* Блоки */
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.body h2 {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--cp-neon-blue);
+}
+
+.body span,
+.body p {
+    font-size: 1rem;
+    color: var(--cp-text-dim);
+}
+
+/* Контакти */
+.contacts div>*:not(:last-child) {
+    margin-bottom: 0.4rem;
+}
+
+.contacts a {
+    color: var(--cp-text-main);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contacts a:hover {
+    color: var(--cp-neon-cyan);
+    text-shadow: var(--cp-glow-cyan);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .patient {
+        padding: 1rem;
+    }
+
+    .patient h1 {
+        font-size: 1.3rem;
+    }
+
+    .body h2 {
+        font-size: 1rem;
+    }
+
+    .body span,
+    .body p {
+        font-size: 0.9rem;
+    }
+}

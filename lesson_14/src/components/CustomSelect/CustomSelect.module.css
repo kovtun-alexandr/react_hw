@@ -1,0 +1,54 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Лейбл */
+.row label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cp-neon-blue);
+}
+
+/* Селект */
+.row select {
+    background: var(--cp-panel);
+    border: 1px solid var(--cp-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    color: var(--cp-text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ховер */
+.row select:hover {
+    border: 1px solid var(--cp-neon-cyan);
+    box-shadow: var(--cp-glow-cyan);
+}
+
+/* Фокус */
+.row select:focus {
+    border: 1px solid var(--cp-neon-pink);
+    box-shadow: var(--cp-glow-pink);
+}
+
+/* Опції */
+.row select option {
+    background: var(--cp-surface);
+    color: var(--cp-text-main);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .row label {
+        font-size: 0.85rem;
+    }
+
+    .row select {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.7rem;
+    }
+}
