@@ -1,0 +1,83 @@
+[
+  {
+    "id": "d001",
+    "fullName": "Олена Ковальчук",
+    "specialty": "Терапевт",
+    "email": "olena.kov@example.com",
+    "phone": "+380501112233",
+    "room": "101",
+    "notes": "Працює з 09:00 до 15:00"
+  },
+  {
+    "id": "d002",
+    "fullName": "Микола Сидоренко",
+    "specialty": "Кардіолог",
+    "email": "mykola.syd@med.com",
+    "phone": "+380631234567",
+    "room": "202",
+    "notes": "Кардіоогляд по понеділках"
+  },
+  {
+    "id": "d003",
+    "fullName": "Анна Дорошенко",
+    "specialty": "Дерматолог",
+    "email": "anna.doro@gmail.com",
+    "phone": "+380673334455",
+    "room": "303",
+    "notes": ""
+  },
+  {
+    "id": "d004",
+    "fullName": "Ігор Лисенко",
+    "specialty": "Ортопед",
+    "email": "lys.igor@hospital.ua",
+    "phone": "+380931122334",
+    "room": "104",
+    "notes": ""
+  },
+  {
+    "id": "d005",
+    "fullName": "Світлана Гончар",
+    "specialty": "Невролог",
+    "email": "svit.gonchar@gmail.com",
+    "phone": "+380682223344",
+    "room": "105",
+    "notes": ""
+  },
+  {
+    "id": "d868f062-6d09-43eb-9335-9c8c7f81db77",
+    "fullName": "Олена Килим",
+    "specialty": "Психолог",
+    "room": "22",
+    "email": "olena_rug@example.com",
+    "phone": "+380663333333",
+    "notes": "Працює з 10:00 до 17:00"
+  },
+  {
+    "id": "5ee1b8db-38f4-45fe-85d9-8dd826784771",
+    "fullName": "Іван Зорькін",
+    "specialty": "Окуліст",
+    "room": "31",
+    "email": "ivan@example.com",
+    "phone": "+380501234567",
+    "notes": "Працює з 9:00 до 18:00"
+  },
+  {
+    "id": "fd04278c-4852-4341-bc5c-6fd3d80d71a1",
+    "fullName": "Олег Панамаренко",
+    "specialty": "Нервопатолог",
+    "room": "57",
+    "notes": "Працює з 7:00 до 17:00",
+    "phone": "+380663332211",
+    "email": "o.panamar@gmail.com"
+  },
+  {
+    "id": "ff9f47f2-ec63-4f7b-8daa-a7f138971675",
+    "fullName": "Ай Болить",
+    "specialty": "Фельшер",
+    "room": "12",
+    "notes": "Працює з 9:00 до 18:00",
+    "phone": "+380987654321",
+    "email": "uhhurt@example.com"
+  }
+]
