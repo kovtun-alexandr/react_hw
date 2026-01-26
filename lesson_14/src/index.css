@@ -270,6 +270,14 @@ tbody td a:hover {
   text-shadow: var(--cp-glow-pink);
 }
 
+.patients tr>td:nth-child(3) {
+  font-size: 22px;
+}
+
+.appointments tr>td:nth-child(6) {
+  text-align: center;
+}
+
 /* Адаптивність */
 @media (max-width: 768px) {
   table {

@@ -1,0 +1,31 @@
+.label {
+    background-color: transparent;
+    color: var(--cp-text-main);
+    border: 1px solid var(--cp-border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.active {
+    color: var(--cp-neon-pink);
+    background-color: var(--cp-neon-green);
+    box-shadow: 0 0 8px var(--cp-neon-green);
+}
+
+.scheduled {
+    color: var(--cp-neon-green);
+    box-shadow: 0 0 8px var(--cp-neon-blue);
+    background-color: var(--cp-neon-blue);
+}
+
+.cancelled {
+    background-color: #555;
+    box-shadow: 0 0 8px #555;
+    opacity: .6;
+}
+
+.completed {
+    background-color: var(--cp-neon-pink);
+    box-shadow: 0 0 8px var(--cp-neon-pink);
+}

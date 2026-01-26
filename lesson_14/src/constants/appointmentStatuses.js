@@ -5,6 +5,14 @@ export const appointmentStatuses = [
     },
     {
         id: 'scheduled',
-        fullName: 'Завершено'
+        fullName: 'Заплановано'
     },
+    {
+        id: 'cancelled',
+        fullName: 'Скасовано'
+    },
+    {
+        id: 'completed',
+        fullName: 'Завершено'
+    }
 ]

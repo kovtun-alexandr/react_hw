@@ -1,7 +1,9 @@
 import { useCreatePatientMutation, useGetPatientByIdQuery, usePutPatientByIdMutation } from "@/api/slices/patientApi";
 import ActionForm from "@/components/ActionForm/ActionForm";
+import Error from "@/components/Error/Error";
 import GeenderInpitRadioFild from "@/components/GeenderInpitRadioFild/GeenderInpitRadioFild";
 import InputField from "@/components/InputField/InputField";
+import Loading from "@/components/Loading/Loading";
 import useForm from "@/hooks/useForm";
 import frontRoutes from "@/router/frontRoutes";
 import { useEffect } from "react";
@@ -11,7 +13,7 @@ function PatientsForm() {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    const { data: patient } = useGetPatientByIdQuery(id, { skip: !id })
+    const { data: patient, error, isLoading } = useGetPatientByIdQuery(id, { skip: !id })
     const [putPatientById] = usePutPatientByIdMutation()
     const [createPatient] = useCreatePatientMutation()
 
@@ -58,70 +60,72 @@ function PatientsForm() {
             ? <h1>Редагувати пацієнта</h1>
             : <h1>Додати пацієнта</h1>
         }
-        <form
-            className="form"
-            onSubmit={handleEditPatient}
-            action=""
-        >
-            <InputField
-                label="Ім`я пацієнта:"
-                type="text"
-                name="fullName"
-                value={value.fullName}
-                placeholder="Введіть ім`я та прізвище пацієнта"
-                onChange={handleChange}
-            />
-            <InputField
-                label="Дата народження пацієнта:"
-                type="date"
-                name="birthDate"
-                value={value.birthDate}
-                placeholder="Виберіть дату народження пацієнта"
-                onChange={handleChange}
-            />
-            <GeenderInpitRadioFild
-                patientId={id}
-                name="gender"
-                value={value.gender}
-                onChange={handleChange}
-            />
-            <InputField
-                label="Вади пацієнта, чи захворювання:"
-                type="text"
-                name="notes"
-                value={value.address}
-                placeholder="Алергія на пеніцилін, і т.д."
-                onChange={handleChange}
-            />
-            <InputField
-                label="Номер телефона пацієнта:"
-                type="tel"
-                name="phone"
-                value={value.phone}
-                placeholder="+380501112233"
-                onChange={handleChange}
-            />
-            <InputField
-                label="E-mail пацієнта:"
-                type="email"
-                name="email"
-                value={value.email}
-                placeholder="somename@example.com"
-                onChange={handleChange}
-            />
-            <InputField
-                label="Адресса пацієнта:"
-                type="text"
-                name="address"
-                value={value.address}
-                placeholder="м. Харків, пр-т Науки, 22"
-                onChange={handleChange}
-            />
-            <ActionForm
-                path={frontRoutes.navigate.patients.root}
-                id={id}
-            />
-        </form>
+        {error ? (<Error error={error} />) : isLoading ? (<Loading />) : (
+            <form
+                className="form"
+                onSubmit={handleEditPatient}
+                action=""
+            >
+                <InputField
+                    label="Ім`я пацієнта:"
+                    type="text"
+                    name="fullName"
+                    value={value.fullName}
+                    placeholder="Введіть ім`я та прізвище пацієнта"
+                    onChange={handleChange}
+                />
+                <InputField
+                    label="Дата народження пацієнта:"
+                    type="date"
+                    name="birthDate"
+                    value={value.birthDate}
+                    placeholder="Виберіть дату народження пацієнта"
+                    onChange={handleChange}
+                />
+                <GeenderInpitRadioFild
+                    patientId={id}
+                    name="gender"
+                    value={value.gender}
+                    onChange={handleChange}
+                />
+                <InputField
+                    label="Вади пацієнта, чи захворювання:"
+                    type="text"
+                    name="notes"
+                    value={value.address}
+                    placeholder="Алергія на пеніцилін, і т.д."
+                    onChange={handleChange}
+                />
+                <InputField
+                    label="Номер телефона пацієнта:"
+                    type="tel"
+                    name="phone"
+                    value={value.phone}
+                    placeholder="+380501112233"
+                    onChange={handleChange}
+                />
+                <InputField
+                    label="E-mail пацієнта:"
+                    type="email"
+                    name="email"
+                    value={value.email}
+                    placeholder="somename@example.com"
+                    onChange={handleChange}
+                />
+                <InputField
+                    label="Адресса пацієнта:"
+                    type="text"
+                    name="address"
+                    value={value.address}
+                    placeholder="м. Харків, пр-т Науки, 22"
+                    onChange={handleChange}
+                />
+                <ActionForm
+                    path={frontRoutes.navigate.patients.root}
+                    id={id}
+                />
+            </form>
+        )}
     </section>);
 }
 

@@ -1,5 +1,6 @@
 import DeleteButton from "@/components/DeleteButton/DeleteButton";
 import EditButton from "@/components/EditButton/EditButton";
+import StatusLabel from "@/components/StatusLabel/StatusLabel";
 import TimeDisplayView from "@/components/TimeDisplayView/TimeDisplayView";
 import frontRoutes from "@/router/frontRoutes";
 
@@ -21,7 +22,11 @@ function AppointmentsItem({ appointment, index, onDelete }) {
                 />
             </td>
             <td>{appointment.reason}</td>
-            <td>{appointment.status}</td>
+            <td>
+                <StatusLabel
+                    statusId={appointment.status}
+                />
+            </td>
             <td>
                 <EditButton
                     title="Редагувати"
