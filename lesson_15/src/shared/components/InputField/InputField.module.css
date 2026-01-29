@@ -1,0 +1,77 @@
+/* .row {
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    width: 100%;
+    gap: 1rem;
+}
+
+@media (max-width: 450px) {} */
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Лейбл */
+.row label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cp-neon-purple);
+}
+
+/* Інпут */
+.row input {
+    background: var(--cp-panel);
+    border: 1px solid var(--cp-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    color: var(--cp-text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Плейсхолдер */
+.row input::placeholder {
+    color: var(--cp-text-dim);
+    opacity: 0.8;
+}
+
+/* Ховер */
+.row input:hover {
+    border: 1px solid var(--cp-neon-cyan);
+    box-shadow: var(--cp-glow-cyan);
+}
+
+/* Фокус */
+.row input:focus {
+    border: 1px solid var(--cp-neon-pink);
+    box-shadow: var(--cp-glow-pink);
+}
+
+.row input[type="date"]::-webkit-calendar-picker-indicator,
+.row input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+    cursor: pointer;
+}
+
+/* Альтернативний варіант — задати конкретний колір */
+.row input[type="date"]::-webkit-calendar-picker-indicator,
+.row input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    padding: 2px;
+    cursor: pointer;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .row label {
+        font-size: 0.85rem;
+    }
+
+    .row input {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.7rem;
+    }
+}

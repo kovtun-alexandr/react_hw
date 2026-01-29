@@ -1,0 +1,39 @@
+.card {
+    background: var(--cp-surface);
+    border: 1px solid var(--cp-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    box-shadow: var(--cp-glow-cyan);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title {
+    color: var(--cp-neon-cyan);
+}
+
+.date,
+.friend {
+    display: flex;
+    gap: 1rem;
+    color: var(--cp-text-dim);
+}
+
+.pink {
+    color: var(--cp-neon-pink);
+}
+
+.action {
+    display: flex;
+    align-self: center;
+    gap: .5rem;
+}

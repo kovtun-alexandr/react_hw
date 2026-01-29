@@ -1,0 +1,19 @@
+.headerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-block: 20px;
+}
+
+.logo {
+    width: 70px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo.no-hover {
+    cursor: default;
+}
