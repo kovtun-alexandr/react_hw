@@ -1,5 +1,4 @@
 import frontRoutes from "@/app/router/frontRoutes";
-import { useGetListQuery } from "@/entities/desire-item/model/itemApi";
 import { useAddItemMutation } from "@/features/desire/add/model/addItemApi";
 import { useEditItemMutation, useGetItemQuery } from "@/features/desire/edit/model/editApi";
 import DesireForm from "@/shared/components/DesireForm/insex";
@@ -34,7 +33,7 @@ function EditDesire() {
     return (<section className="edit">
         {displayTitle}
         <DesireForm
-            initialValue={item || { title: '', date: '', friend: '' }}
+            initialValue={item || { title: '', date: '', friendName: '' }}
             onSubmit={handleSubmit}
         />
     </section>);

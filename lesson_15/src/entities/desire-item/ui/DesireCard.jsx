@@ -10,7 +10,7 @@ function DesireCard({ item, actions }) {
                 <div className={styles.date}>Desire achievement date: <ParseServerDate isoStringDate={item.date} />
                 </div>
                 <div className={styles.friend}>Friend:
-                    <span className={styles.pink}>{item.friend}</span>
+                    <span className={styles.pink}>{item.friendName}</span>
                 </div>
             </div>
             {!!actions && <div className={styles.action}>

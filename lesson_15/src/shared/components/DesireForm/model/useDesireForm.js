@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { formatDateForInput } from './formatDateForInput'
 
 export function useDesireForm(
-    initialValues = { title: '', date: '', friend: '' },
+    initialValues = { title: '', date: '', friendName: '' },
     onSubmit,
 ) {
     const [values, setValues] = useState(() => ({
@@ -16,7 +16,7 @@ export function useDesireForm(
         const errs = {}
         if (!vals.title.trim()) errs.title = 'Enter your desire'
         if (!vals.date) errs.date = 'Choose a date'
-        if (!vals.friend.trim()) errs.friend = 'Enter your friend'
+        if (!vals.friendName.trim()) errs.friend = 'Enter your friend'
         return errs
     }
 

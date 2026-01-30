@@ -30,8 +30,8 @@ function DesireForm({ onSubmit, initialValue }) {
             <InputField
                 label="Friend's name"
                 type="text"
-                name="friend"
-                value={values.friend}
+                name="friendName"
+                value={values.friendName}
                 placeholder="Enter your friend's name"
                 onChange={handleChange}
             />
