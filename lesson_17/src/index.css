@@ -1,0 +1,197 @@
+@import 'tailwindcss';
+
+:root {
+  /* ====== BASE DARK COLORS ====== */
+  --cp-bg-0: #030712;
+  /* ультра-темний синьо-чорний */
+  --cp-bg-1: #0B0F19;
+  /* темний космічний синій */
+  --cp-bg-2: #11131F;
+  /* нічний синьо-фіолетовий */
+  --cp-panel: #0D0221;
+  /* фіолетовий космос для блоків */
+  --cp-surface: #1A1D2E;
+  /* поверхні/карточки */
+
+  /* ====== NEON ACCENTS ====== */
+  --cp-neon-cyan: #00F6FF;
+  --cp-neon-pink: #FF00E6;
+  --cp-neon-blue: #3A7BFF;
+  --cp-neon-green: #00FF8F;
+  --cp-neon-purple: #7A00FF;
+
+  /* ====== TEXT COLORS ====== */
+  --cp-text-main: #E4E8FF;
+  /* світлий текст */
+  --cp-text-dim: #8891B8;
+  /* приглушений */
+  --cp-text-neon: #00F6FF;
+  /* акцент */
+
+  /* ====== BORDERS / LINES ====== */
+  --cp-border: rgba(0, 246, 255, 0.3);
+  --cp-border-strong: rgba(255, 0, 230, 0.5);
+
+  /* ====== SHADOWS / GLOWS ====== */
+  --cp-glow-cyan: 0 0 12px #00F6FF;
+  --cp-glow-pink: 0 0 12px #FF00E6;
+  --cp-glow-green: 0 0 12px #00FF8F;
+  --cp-glow-purple: 0 0 12px #7A00FF;
+
+  /* ====== SPECIAL ====== */
+  --cp-grid-line: rgba(0, 246, 255, 0.06);
+  /* для сітки на фоні */
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--cp-surface);
+  color: var(--cp-text-main);
+  font-family: "Orbitron", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  >main {
+    flex-grow: 1;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+.btn-neon {
+  @apply px-4 py-2 rounded-md bg-[var(--cp-neon-pink)] text-[var(--cp-bg-0)] font-semibold transition hover:bg-[var(--cp-neon-purple)] hover:text-[var(--cp-text-main)] hover:shadow-[var(--cp-glow-pink)] focus:outline-none focus:ring-2 focus:ring-[var(--cp-neon-cyan)] disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-fit {
+  @apply self-start items-center justify-center px-4 py-2 rounded-md bg-[var(--cp-neon-pink)] text-[var(--cp-bg-0)] font-semibold transition hover:bg-[var(--cp-neon-purple)] hover:text-[var(--cp-text-main)] hover:shadow-[var(--cp-glow-pink)] focus:outline-none focus:ring-2 focus:ring-[var(--cp-neon-cyan)] disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-login {
+  @apply px-4 py-2 rounded-md bg-[var(--cp-neon-green)] text-[var(--cp-bg-0)] font-semibold transition hover:bg-[var(--cp-neon-cyan)] hover:text-[var(--cp-text-main)] hover:shadow-[var(--cp-glow-green)] disabled:opacity-50 disabled:cursor-not-allowed
+}
+
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.select-wrapper {
+  @apply flex flex-col gap-4 mt-4;
+}
+
+.header {
+  @apply py-3 bg-[var(--cp-bg-1)] text-[var(--cp-text-main)] border-b border-[var(--cp-border)] shadow-[var(--cp-glow-cyan)];
+
+}
+
+.select-wrapper h1 {
+  @apply text-4xl font-bold text-center text-[var(--cp-neon-cyan)] drop-shadow-[0_0_10px_var(--cp-neon-cyan)];
+}
+
+.title-2 {
+  @apply text-lg font-bold text-[var(--cp-neon-cyan)] drop-shadow-[var(--cp-glow-cyan)];
+}
+
+.text {
+  @apply text-[var(--cp-text-main)] text-sm leading-relaxed;
+}
+
+.text-lg {
+  @apply text-[var(--cp-text-main)] text-lg leading-relaxed;
+}
+
+.text-pink {
+  @apply text-[var(--cp-neon-pink)];
+}
+
+.text-cyan {
+  @apply text-[var(--cp-neon-cyan)];
+}
+
+.nav {
+  @apply flex gap-3 px-3 py-2;
+}
+
+.active {
+  @apply text-[var(--cp-neon-cyan)] border-[var(--cp-neon-cyan)] shadow-[var(--cp-glow-cyan)]
+}
+
+.link {
+  @apply text-[var(--cp-text-dim)] hover:text-[var(--cp-neon-pink)] hover:shadow-[var(--cp-glow-pink)]
+}
+
+.block-col {
+  @apply flex flex-col gap-3 p-6 mb-4 bg-[var(--cp-surface)] rounded-xl border border-[var(--cp-border)] shadow-[var(--cp-glow-purple)] hover:shadow-[var(--cp-glow-cyan)] transition;
+}
+
+.block-row {
+  @apply flex gap-3 p-6 mb-4 bg-[var(--cp-surface)] rounded-xl border border-[var(--cp-border)] shadow-[var(--cp-glow-purple)] hover:shadow-[var(--cp-glow-cyan)] transition;
+}
+
+.block-item {
+  @apply flex gap-3 p-3 justify-between items-center bg-[var(--cp-surface)] rounded-xl border border-[var(--cp-border)] shadow-[var(--cp-glow-purple)] hover:shadow-[var(--cp-glow-cyan)] transition;
+}
+
+.wrap {
+  @apply flex gap-3 items-center;
+}
+
+.wrap-col {
+  @apply flex flex-col gap-3;
+}
+
+.avatar {
+  @apply flex items-center justify-center w-10 h-10 rounded-full bg-[var(--cp-neon-blue)] text-[var(--cp-bg-0)] font-bold shadow-[var(--cp-glow-blue)];
+}
+
+.label-role {
+  @apply ml-auto self-center px-3 py-1 rounded-md bg-[var(--cp-neon-cyan)] text-[var(--cp-bg-0)] text-xs font-semibold shadow-[var(--cp-glow-pink)];
+}
+
+.auth-form {
+  @apply flex flex-col gap-4 p-6 bg-[var(--cp-surface)] rounded-lg border border-[var(--cp-border)] shadow-[var(--cp-glow-purple)] w-full max-w-sm mx-auto;
+}
+
+.form {
+  @apply flex flex-col gap-3 w-full p-4 bg-[var(--cp-surface)] rounded-lg border border-[var(--cp-border)] shadow-[var(--cp-glow-purple)];
+}
+
+.textarea {
+  @apply w-full p-3 rounded-md bg-[var(--cp-bg-0)] text-[var(--cp-text-main)] border border-[var(--cp-border)] focus:outline-none focus:ring-2 focus:ring-[var(--cp-neon-cyan)] resize-none;
+}
+
+.form-action {
+  @apply flex gap-4;
+}
+
+.form-create-user {
+  @apply flex flex-col gap-4 w-full p-6 mb-6 rounded-xl bg-[var(--cp-surface)] border border-[var(--cp-border)] shadow-[var(--cp-glow-purple)];
+}
+
+.row {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @aplly text-sm text-[var(--cp-text-dim)];
+}
+
+.input {
+  @apply px-3 py-2 rounded-md bg-[var(--cp-bg-1)] border border-[var(--cp-border)] text-[var(--cp-text-main)] focus:outline-none focus:ring-2 focus:ring-[var(--cp-neon-cyan)];
+}
